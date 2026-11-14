@@ -1,0 +1,148 @@
+
+/* ECHTE GOTISCHE TITELS — Fraktur zoals het voorbeeld */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+:root { --gothic-font: 'UnifrakturCook', 'Old English Text MT', 'Lucida Blackletter', Georgia, serif; }
+.brand, .banner-text strong, .hero-new h1, .section h2, .section-banner strong,
+.plan h3, .info h3, .feature h2, #crew h2, #vip h2 {
+  font-family: var(--gothic-font) !important;
+  font-weight: 700 !important;
+  letter-spacing: .012em !important;
+  text-transform: none;
+}
+.brand {font-size:clamp(19px,2vw,27px)!important;line-height:1.2}
+.banner-text strong {font-size:clamp(29px,4.7vw,60px)!important;line-height:1.18!important;text-shadow:0 0 7px #f3e8ff,0 0 21px #a15bff,0 0 45px #9d3dff!important}
+.hero-new h1 {font-size:clamp(39px,5.2vw,76px)!important;line-height:1.22!important;text-shadow:0 0 10px #a879ff88,0 0 30px #8d42ff88!important}
+.section h2 {font-size:clamp(32px,3.6vw,50px)!important;line-height:1.2!important}
+.plan h3,.info h3 {font-size:clamp(21px,2vw,28px)!important}
+@media(max-width:600px){.banner-text strong{font-size:clamp(25px,7vw,39px)!important}.hero-new h1{font-size:clamp(35px,8vw,49px)!important}}
+
+/* PC CAFE GAMING — NEON MAKE-OVER | behoudt alle functies */
+:root{--neon-blue:#24dfff;--neon-purple:#a15bff;--neon-pink:#ff4fc5}
+.top{border-bottom:2px solid #26dfff!important;box-shadow:0 0 25px #26dfff55!important}
+.brand{color:white;text-shadow:0 0 20px #a15bff}
+.hero-new h1{text-shadow:0 0 30px #a15bff88}
+.photo-frame{border:2px solid #24dfff!important;box-shadow:0 0 35px #24dfff77,0 0 75px #a15bff55!important}
+#shop .product:hover{transform:translateY(-6px);box-shadow:0 0 30px #b54cff88,0 0 20px #24dfff55!important}
+.btn:hover{box-shadow:0 0 30px #ff4fc5aa!important}
+.section-banner{border-color:#24dfff!important;box-shadow:0 0 35px #a15bff77!important}
+.hero-kicker{border-color:#24dfff88;box-shadow:0 0 22px #24dfff25}
+.highlights div{border-color:#24dfff88;box-shadow:0 0 18px #24dfff22,inset 0 0 15px #a15bff19}
+#vip .plan.featured{border-color:#ff4fc5!important;box-shadow:0 0 30px #ff4fc544!important}
+.crew-list button:hover{border-color:#24dfff;background:#142e46;box-shadow:0 0 16px #24dfff44}
+@media(prefers-reduced-motion:reduce){.gaming-motion-bg{animation:none!important}}
+
+/* GOTHIC NEON TYPOGRAPHY - PC CAFE GAMING */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&family=UnifrakturCook:wght@700&display=swap');
+:root{--gothic-font:'UnifrakturCook','Pirata One',Georgia,serif}
+.brand,.hero-new h1,.section-banner .banner-text strong,.heading h2,.section h2:not(.modal-title){font-family:var(--gothic-font)!important;font-weight:700!important;letter-spacing:.025em!important;text-transform:none}
+.brand{font-size:clamp(20px,2.2vw,31px)!important;text-shadow:0 0 7px #b4a2ff,0 0 22px #8c42ff,0 0 38px #20dfff!important}
+.hero-new h1{font-size:clamp(39px,5.8vw,82px)!important;line-height:1.17!important;text-shadow:0 0 10px #a875ff,0 0 28px #813fff99!important}
+.section-banner .banner-text strong{font-size:clamp(28px,4.7vw,62px)!important;line-height:1.2!important;letter-spacing:.035em!important;text-shadow:0 2px 0 #54218a,0 0 12px #d8b4ff,0 0 28px #8f4aff,0 0 42px #24dfff77!important}
+.heading h2,.section h2{font-size:clamp(31px,3.7vw,48px)!important;line-height:1.2!important;text-shadow:0 0 16px #8f4aff77}
+.banner-text span,.links,.btn,.muted,.info,.plan,.crew-list,.notice{font-family:Inter,system-ui,Arial,sans-serif!important}
+@media(max-width:550px){.section-banner .banner-text strong{font-size:clamp(24px,7vw,38px)!important}.brand{font-size:20px!important}}
+
+/* Gothic Neon — crewcontacten en statistieken */
+.crew-list{gap:16px!important;margin-top:24px!important}
+.crew-list button{position:relative;overflow:hidden;min-height:82px;padding:17px 12px!important;border:2px solid #9d57ff!important;border-radius:16px!important;background:linear-gradient(135deg,#0b1735,#281042 55%,#0b1735)!important;box-shadow:inset 0 0 16px #4c2d9955,0 0 16px #7e38ff66,0 9px 24px #0008!important;color:#f9eeff!important;font-family:'UnifrakturCook','Old English Text MT',Georgia,serif!important;font-size:clamp(19px,2vw,27px)!important;letter-spacing:.015em;text-shadow:0 0 11px #d37dff,0 0 25px #8e4aff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.crew-list button:nth-child(even){border-color:#2cdcff!important;box-shadow:inset 0 0 16px #1165a455,0 0 16px #0ccaff66,0 9px 24px #0008!important;text-shadow:0 0 10px #71e6ff,0 0 22px #8d58ff}
+.crew-list button:hover,.crew-list button:focus-visible{transform:translateY(-4px);border-color:#ff75df!important;box-shadow:0 0 26px #c65cffaa,0 0 16px #26ddff77!important}
+.highlights{gap:18px!important}
+.highlights div{min-height:134px!important;justify-content:center;align-items:center;text-align:center;border:2px solid #8b54ff!important;border-radius:19px!important;background:linear-gradient(145deg,#0a1935e8,#29113ee8 55%,#090e2be8)!important;box-shadow:inset 0 0 22px #8d44ff30,0 0 20px #844aff77,0 12px 28px #0008!important}
+.highlights div:nth-child(even){border-color:#25dfff!important;box-shadow:inset 0 0 22px #0b9fc530,0 0 20px #13bfff77,0 12px 28px #0008!important}
+.highlights strong{font-family:'UnifrakturCook','Old English Text MT',Georgia,serif!important;font-size:clamp(37px,4vw,56px)!important;line-height:1.05;color:#f5eaff!important;text-shadow:0 0 12px #b66aff,0 0 27px #9c4dff!important}
+.highlights span{font-size:13px!important;font-weight:750;color:#d9c9f8!important;letter-spacing:.04em;text-shadow:0 0 8px #8b50ff55}
+@media(max-width:650px){.crew-list{grid-template-columns:1fr 1fr!important;gap:10px!important}.crew-list button{min-height:75px;font-size:19px!important}.highlights{gap:10px!important}.highlights div{min-height:115px!important}.highlights strong{font-size:38px!important}}
+@media(prefers-reduced-motion:reduce){.crew-list button{transition:none!important}}
+
+
+/* COMPLETE NEON GAMING HOMEPAGE — behoudt bestaande functionaliteit */
+:root{--neon-cyan:#15e7ff;--neon-pink:#fb4bd9;--neon-purple:#b468ff}
+.top{background:#050719f5!important}.nav{max-width:1600px;gap:18px;flex-wrap:wrap}.brand{font-size:clamp(16px,1.8vw,25px)!important}.links{gap:clamp(9px,1.4vw,24px);flex-wrap:wrap}.links a{font-size:clamp(11px,.85vw,14px);font-weight:850;white-space:nowrap;text-transform:uppercase}.links a:first-child{color:#76eaff;text-shadow:0 0 15px #09cfff}
+main.shell{max-width:1480px!important;background:linear-gradient(90deg,#06081ce8,#090b22d8 50%,#06081ce8)!important}
+.hero-new{padding-top:18px!important}.arena-hero{position:relative;overflow:hidden;border:1px solid #16dfff;border-radius:22px;min-height:clamp(330px,35vw,535px);background:linear-gradient(90deg,#06091eb3,#0c092a75 45%,#06091eb3),url('gamingkamer-achtergrond.jpg') center 46%/cover;box-shadow:0 0 30px #20dfff66,0 0 70px #9c45ff40,inset 0 0 55px #0009}.arena-hero:after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 2px #bc58ff55,inset 0 -55px 80px #06051d}.arena-topline{position:relative;z-index:2;display:flex;justify-content:space-between;gap:12px;padding:18px 22px;color:#d2edff;font-size:12px;font-weight:900;letter-spacing:.13em;text-shadow:0 0 10px #2cbfff}.arena-clock{padding:8px 14px;border:1px solid #b94dff;border-radius:12px;background:#09061dcc;box-shadow:0 0 15px #b94dff77;font-variant-numeric:tabular-nums}.arena-art{position:relative;z-index:1;min-height:390px;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:15px 20px 40px}.arena-emblem{position:relative;font-size:clamp(70px,10vw,135px);line-height:1;filter:drop-shadow(0 0 20px #a23aff);animation:emblemFloat 7s ease-in-out infinite alternate}.arena-emblem span{position:absolute;font-size:.45em;right:-.35em;top:.35em;filter:drop-shadow(0 0 12px #14dfff)}.arena-logo{font-family:'UnifrakturCook','Old English Text MT',Georgia,serif;font-size:clamp(54px,8vw,118px);font-weight:900;line-height:.93;color:#f7f2ff;text-shadow:0 3px 0 #3a195d,0 0 16px #ac64ff,0 0 50px #a944ff;letter-spacing:.015em}.arena-logo span{display:block;color:#c58aff;text-shadow:0 0 17px #f052ff,0 0 45px #7c30ff}.arena-art p{color:#aeeeff;letter-spacing:.25em;font-size:clamp(10px,1.2vw,15px);font-weight:900;text-shadow:0 0 14px #08bfff}.arena-lightbar{height:3px;width:min(75%,630px);background:linear-gradient(90deg,transparent,#13dfff,#f450ef,transparent);box-shadow:0 0 20px #17dcff}.hero-new>.banner-home{display:none!important}.hero-new>.hero-kicker{margin-top:30px}.hero-new>h1{font-size:clamp(35px,4.2vw,61px)!important;line-height:1.15!important;margin-top:22px!important}.hero-new>p{max-width:800px}.hero-actions{margin-bottom:30px!important}
+.portal-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px;margin:28px 0 38px}.portal-card{--accent:#1de7ff;display:flex;align-items:center;flex-direction:column;text-align:center;gap:12px;min-height:220px;padding:20px 12px 15px;border:2px solid var(--accent);border-radius:17px;background:linear-gradient(155deg,#102343ef,#080a1ded 65%,#120925ef);box-shadow:0 0 18px color-mix(in srgb,var(--accent),transparent 50%),inset 0 0 20px #091c3e;transition:transform .2s,box-shadow .2s}.portal-card:hover{transform:translateY(-6px);box-shadow:0 0 30px var(--accent)}.portal-card.blue{--accent:#00aaff}.portal-card.gold{--accent:#ffbc3c}.portal-card.red{--accent:#ff426e}.portal-card.indigo{--accent:#8177ff}.portal-card.pink{--accent:#f050ef}.portal-icon{font-size:39px;line-height:1;color:var(--accent);text-shadow:0 0 17px var(--accent)}.portal-card strong{font-size:clamp(14px,1.2vw,20px);color:white;text-shadow:0 0 9px var(--accent)}.portal-card small{color:#d8d6ea;font-size:12px;line-height:1.5;flex:1}.portal-cta{border:1px solid var(--accent);border-radius:24px;padding:7px 11px;color:white;background:#102040;font-size:11px;font-weight:900;box-shadow:0 0 10px var(--accent)}
+.collection-showcase{margin:50px 0 18px;padding:24px;border:1px solid #8248ff77;border-radius:24px;background:linear-gradient(120deg,#07142ee8,#1b0a31e8,#06162fe8);box-shadow:0 0 40px #a34aff26}.collection-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}.collection-head h2{font-family:'UnifrakturCook','Old English Text MT',Georgia,serif;font-size:clamp(32px,4vw,56px);margin:0;color:#f5edff;text-shadow:0 0 20px #b266ff}.collection-head h2 span{color:#ca87ff}.collection-head a,.collection-bottom a{font-size:12px;font-weight:900;color:#8defff}.collection-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px}.collection-grid a{position:relative;min-height:180px;overflow:hidden;border:2px solid #b54aff;border-radius:14px;box-shadow:0 0 16px #b54aff77;transition:transform .2s}.collection-grid a:nth-child(even){border-color:#1bcfff;box-shadow:0 0 16px #1bcfff66}.collection-grid a.gold{border-color:#ffc348;box-shadow:0 0 18px #ffb93788}.collection-grid a:hover{transform:translateY(-5px)}.collection-grid img{width:100%;height:100%;min-height:180px;object-fit:cover;display:block}.collection-grid b{position:absolute;bottom:0;left:0;right:0;padding:26px 5px 12px;text-align:center;background:linear-gradient(transparent,#050518ee);font-size:clamp(11px,1vw,16px);color:white;text-shadow:0 0 9px #ab65ff}.collection-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:18px;font-size:12px;color:#c8c1df}.extra-section{margin-top:30px}
+@keyframes emblemFloat{to{transform:translateY(-12px)}}@media(max-width:1150px){.portal-grid,.collection-grid{grid-template-columns:repeat(3,1fr)}.links{margin-left:0}.nav{justify-content:center}.arena-art{min-height:300px}}@media(max-width:650px){.portal-grid,.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.portal-card{min-height:190px}.arena-topline{flex-direction:column;align-items:center;text-align:center}.arena-art{min-height:270px}.arena-logo{font-size:clamp(44px,10vw,75px)}.collection-showcase{padding:14px}.collection-grid a,.collection-grid img{min-height:135px}.links{justify-content:center}.links a{font-size:10px}.arena-hero{min-height:330px}}@media(prefers-reduced-motion:reduce){.arena-emblem{animation:none}}
+
+/* Stoere cyberdraak in plaats van cartoon emoji */
+.arena-art{padding-top:8px!important}.arena-dragon{display:block;width:min(62vw,440px);height:230px;max-width:100%;object-fit:contain;object-position:center;filter:drop-shadow(0 0 19px #00cfff77) drop-shadow(0 0 24px #a434ff77);animation:dragonFloat 8s ease-in-out infinite alternate}.arena-logo{font-size:clamp(52px,7vw,104px);position:relative;z-index:2;margin-top:-8px}.arena-hero{background-position:center center}@keyframes dragonFloat{to{transform:translateY(-8px)}}@media(max-width:650px){.arena-dragon{height:170px;width:min(85vw,340px)}.arena-logo{font-size:clamp(44px,10vw,72px)}}@media(prefers-reduced-motion:reduce){.arena-dragon{animation:none}}
+
+/* YouTube Zone: drie aparte gothic neon channel cards */
+.youtube-channel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:28px 0 10px}.youtube-channel{min-width:0;text-align:center;padding:30px 18px 25px;border-radius:22px;border:1px solid #8f54ff;background:radial-gradient(circle at 50% 0%,#5321838a,transparent 65%),linear-gradient(155deg,#11182f,#160d2e 70%,#0a152b);box-shadow:0 0 22px #a64aff4a,inset 0 0 28px #5624a325;transition:transform .2s,box-shadow .2s}.youtube-channel:hover{transform:translateY(-5px);box-shadow:0 0 35px #9c4dff80,0 0 18px #00cfff55}.youtube-channel-icon{font-family:Arial,sans-serif;font-size:35px;line-height:1;margin:0 auto 15px;display:grid;place-items:center;width:78px;height:78px;border-radius:22px;color:#fff;background:linear-gradient(145deg,#e22b69,#a321a6);box-shadow:0 0 28px #f33d9d88}.youtube-tag{font-size:11px;letter-spacing:.15em;color:#5deaff;font-weight:800}.youtube-channel h3{font-size:clamp(25px,2.5vw,36px);margin:13px 0 8px;color:#f5e9ff;text-shadow:0 0 16px #bd62ff}.youtube-channel p{color:#d3c8e8;overflow-wrap:anywhere;margin:0 0 23px}.youtube-channel .btn{display:inline-block;max-width:100%;font-size:13px}@media(max-width:850px){.youtube-channel-grid{grid-template-columns:1fr;max-width:500px;margin-inline:auto}}
+
+/* YouTube Legends — bespoke PC Café Gaming dragon/cyber arena */
+.youtube-arena{position:relative;isolation:isolate}.youtube-arena:before{content:"";pointer-events:none;position:absolute;inset:155px -12px 0;z-index:-1;background:radial-gradient(ellipse at 50% 0%,#073b6b55,transparent 55%)}
+.banner-youtube{border-color:#2ddfff!important;background:linear-gradient(110deg,#050b22ed,#17244ae8 45%,#180e38ef),url('draken-banner.jpg') center 48%/cover!important;box-shadow:0 0 30px #0ce3ff44,inset 0 0 55px #533bff44!important}
+.banner-youtube .banner-text strong{font-family:'Old English Text MT','UnifrakturCook','Cinzel Decorative',Georgia,serif!important;letter-spacing:.045em;text-shadow:0 3px 0 #2b2568,0 0 16px #18cfff,0 0 32px #804aff!important}
+.youtube-intro{text-align:center;max-width:850px;margin:0 auto 24px!important;line-height:1.7}
+.youtube-channel-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:24px 0 16px}
+.youtube-channel{--accent:#18d8ff;--glow:#16cfff70;position:relative;overflow:hidden;min-width:0;border:1px solid var(--accent)!important;border-radius:14px!important;background:#080f27!important;text-align:center;box-shadow:0 0 20px var(--glow),inset 0 0 28px #183d7244!important;transition:transform .3s ease,box-shadow .3s ease}
+.youtube-channel:after{content:"";position:absolute;pointer-events:none;inset:0;border:1px solid #ffffff1b;border-radius:inherit}
+.youtube-channel:hover{transform:translateY(-7px);box-shadow:0 0 35px var(--glow),0 0 12px var(--accent)!important}
+.youtube-bompa{--accent:#ffc15c;--glow:#ff9d3270}.youtube-kenji{--accent:#22dfff;--glow:#22dfff70}.youtube-glenn{--accent:#ba6bff;--glow:#a858ff70}
+.youtube-channel-art{position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;min-height:194px;overflow:hidden;background:linear-gradient(0deg,#081025 0%,transparent 85%),radial-gradient(ellipse at 50% 45%,var(--glow),transparent 60%),url('cyberdraak-neon.png') center 42%/auto 165% no-repeat,#07142b;border-bottom:1px solid var(--accent)}
+.youtube-bompa .youtube-channel-art{background:linear-gradient(0deg,#0d1024 0%,#0b102b55 75%),radial-gradient(circle at 50% 55%,#ff9a2755,transparent 65%),url('wallpapers/dragon.webp') center/cover}
+.youtube-glenn .youtube-channel-art{background:linear-gradient(0deg,#0c102b 0%,#11102d55 75%),radial-gradient(circle at 50% 55%,#933aff66,transparent 65%),url('wallpapers/racing.webp') center/cover}
+.youtube-channel-number{position:absolute;top:14px;left:16px;font-size:10px;font-weight:900;letter-spacing:.18em;color:#e8f7ff;text-shadow:0 0 8px #000}
+.youtube-channel-symbol{font-size:66px;line-height:1;filter:drop-shadow(0 0 15px var(--accent));text-shadow:0 0 22px var(--accent);transition:transform .4s ease}
+.youtube-channel:hover .youtube-channel-symbol{transform:scale(1.1)}
+.youtube-channel-type{position:absolute;bottom:13px;left:0;right:0;font-size:11px;font-weight:900;letter-spacing:.26em;color:#fff;text-shadow:0 0 12px var(--accent),0 2px 5px #000}
+.youtube-channel-body{padding:22px 16px 26px;background:linear-gradient(180deg,#0b1630,#090b21)}
+.youtube-tag{font-size:10px;letter-spacing:.19em;color:var(--accent);font-weight:900}
+.youtube-channel h3{font-family:'Old English Text MT','UnifrakturCook','Cinzel Decorative',Georgia,serif!important;font-size:clamp(30px,2.8vw,42px)!important;line-height:1.15;margin:13px 0 8px!important;color:#fff!important;text-shadow:0 0 12px var(--accent),0 2px 0 #273465!important}
+.youtube-channel p{margin:0 0 22px!important;color:#c3d8ee!important;font-size:14px;overflow-wrap:anywhere}
+.youtube-visit{display:flex;align-items:center;justify-content:center;gap:12px;max-width:290px;margin:auto;padding:13px 12px;border:1px solid var(--accent);border-radius:7px;background:linear-gradient(100deg,#0a2344,#172351);color:#fff!important;font-size:12px;font-weight:950;letter-spacing:.075em;text-decoration:none;box-shadow:inset 0 0 12px var(--glow),0 0 12px var(--glow);transition:background .2s,transform .2s}
+.youtube-visit:hover{background:var(--accent);color:#071126!important;transform:scale(1.025)}
+.youtube-bottom-line{text-align:center;color:#7de9ff;font-size:11px;letter-spacing:.16em;font-weight:900;margin:24px 0 0;text-shadow:0 0 10px #1ccfff}
+@media(max-width:900px){.youtube-channel-grid{grid-template-columns:1fr;max-width:540px;margin-inline:auto}.youtube-channel-art{min-height:180px}}
+@media(max-width:480px){.youtube-bottom-line{font-size:9px;letter-spacing:.05em}.youtube-channel-body{padding:20px 12px 24px}}
+@media(prefers-reduced-motion:reduce){.youtube-channel,.youtube-channel-symbol,.youtube-visit{transition:none}}
+
+/* Clean creator art: no emoji, tiny logos or symbols over the artwork */
+.youtube-channel-symbol{display:none!important}
+.youtube-channel-art{background-size:cover; background-position:center;min-height:220px}
+.youtube-kenji .youtube-channel-art{background:linear-gradient(0deg,#081025 0%,transparent 85%),url('cyberdraak-neon.png') center 46%/cover no-repeat}
+.youtube-channel-type{position:absolute;bottom:12px;left:0;right:0;text-align:center}
+
+/* Persoonlijke YouTube-creators: eigen logo, bestaande neonkaart behouden */
+.youtube-bompa .youtube-channel-art{background:linear-gradient(0deg,rgba(9,12,30,.70),transparent 50%),url("bompa-lawijt-youtube.png") center 48%/cover no-repeat,#080c21!important}
+.youtube-glenn .youtube-channel-art{background:linear-gradient(0deg,rgba(9,12,30,.70),transparent 50%),url("glennory-raceboy-youtube.png") center 48%/cover no-repeat,#080c21!important}
+.youtube-kenji .youtube-channel-art{background:linear-gradient(0deg,rgba(9,12,30,.70),transparent 50%),url("draken-banner.jpg") center/cover no-repeat,#080c21!important}
+
+
+/* 2026-11-14: six approved illustrated gaming banners; original semantic text remains in DOM. */
+.section-banner{width:100%;aspect-ratio:4.48/1;min-height:0!important;padding:0!important;margin-bottom:28px!important;display:block!important;position:relative!important;border:0!important;border-radius:14px!important;background-color:#07091c!important;background-repeat:no-repeat!important;background-position:center!important;background-size:100% 100%!important;box-shadow:0 0 22px #4a45ff55!important;overflow:hidden!important}
+.section-banner::before,.section-banner::after{display:none!important}
+.section-banner .banner-side{display:none!important}
+.section-banner .banner-text{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.banner-youtube{background-image:url('banner-youtube.webp')!important}
+.banner-crew{background-image:url('banner-crew.webp')!important}
+.banner-vip{background-image:url('banner-vip.webp')!important}
+.banner-custom{background-image:url('banner-custom.webp')!important}
+.banner-shop,.banner-home{background-image:url('banner-shop.webp')!important}
+#contact>.section-banner{background-image:url('banner-contact.webp')!important}
+@media(max-width:600px){.section-banner{border-radius:8px!important;margin-bottom:20px!important}}
+
+
+/* Custom neon artwork for the six crew buttons and four statistics. */
+.crew-list{gap:16px!important}
+.crew-list button{background-color:#080d24!important;background-size:cover!important;background-position:center!important;min-height:125px!important;padding:58px 12px 14px!important;isolation:isolate;line-height:1.1!important;position:relative!important;text-shadow:0 2px 3px #000,0 0 12px #1b0b2f,0 0 18px #fff!important;box-shadow:0 9px 25px #000a,0 0 17px #763cff66!important}
+.crew-list button::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#03091c88,#03091c77),linear-gradient(0deg,#03091cee 0%,transparent 70%);z-index:-1;border-radius:inherit}
+.crew-list button:hover{filter:brightness(1.15)}
+.highlights{gap:15px!important}
+.highlights>div{background-color:#0c0b22!important;background-size:cover!important;background-position:center!important;min-height:145px!important;justify-content:end!important;position:relative;isolation:isolate;padding:18px 8px!important;text-shadow:0 2px 5px #000,0 0 15px #0b0824!important}
+.highlights>div::before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#030516f5 0%,#05061b88 65%,#03051644);border-radius:inherit;z-index:-1}
+.highlights>div strong{font-size:clamp(35px,4vw,55px)!important;line-height:1.05}
+.highlights>div span{font-size:13px!important;color:#fff!important;font-weight:800!important}
+.crew-list button:nth-child(1){background-image:url("crew-neon-1.webp")!important}
+.crew-list button:nth-child(2){background-image:url("crew-neon-2.webp")!important}
+.crew-list button:nth-child(3){background-image:url("crew-neon-3.webp")!important}
+.crew-list button:nth-child(4){background-image:url("crew-neon-4.webp")!important}
+.crew-list button:nth-child(5){background-image:url("crew-neon-5.webp")!important}
+.crew-list button:nth-child(6){background-image:url("crew-neon-6.webp")!important}
+.highlights>div:nth-child(1){background-image:url("stat-neon-1.webp")!important}
+.highlights>div:nth-child(2){background-image:url("stat-neon-2.webp")!important}
+.highlights>div:nth-child(3){background-image:url("stat-neon-3.webp")!important}
+.highlights>div:nth-child(4){background-image:url("stat-neon-4.webp")!important}
+@media(max-width:650px){.crew-list button{min-height:115px!important;padding:48px 8px 12px!important}.highlights>div{min-height:130px!important}}

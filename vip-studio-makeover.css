@@ -1,0 +1,31 @@
+/* VIP + custom wallpaper makeover — all original forms and button behavior retained */
+#custom .feature{position:relative;overflow:hidden;grid-template-columns:minmax(0,1fr) minmax(0,1.04fr);gap:clamp(20px,3vw,42px);padding:clamp(22px,3vw,40px)!important;background:radial-gradient(circle at 37% 25%,#4c1ba965,transparent 34%),linear-gradient(110deg,#080c23f2,#120c32e8 48%,#070b25f5),url('draken-banner.jpg') center/cover!important;border:2px solid #8e57ff!important;box-shadow:0 0 26px #b238ff5c,inset 0 0 50px #0de4ff1a!important}
+#custom .feature:before{content:"";position:absolute;left:20%;bottom:-45px;width:45%;height:65%;background:url('draken-banner.jpg') center/cover no-repeat;opacity:.30;filter:saturate(1.5) drop-shadow(0 0 20px #27caff);mask-image:linear-gradient(90deg,transparent,#000 30%,#000 70%,transparent);pointer-events:none}
+#custom .feature>div,#custom .feature form{position:relative;z-index:1}
+#custom .feature h2{font-family:'Old English Text MT','UnifrakturCook',Georgia,serif;font-size:clamp(29px,3.4vw,47px)!important;color:#fff;text-shadow:0 0 18px #ac69ff}
+#custom .feature .eyebrow{color:#67f3ff}
+#custom .feature .muted{max-width:440px;color:#e1ddf2}
+#custom .feature .notice{margin-top:24px;padding:15px 17px;border-left:3px solid #ec50e7;background:#0a0b28c9;border-radius:0 12px 12px 0;color:#f1d8ff}
+#custom .formgrid{padding:18px;border:1px solid #7b4ed6;border-radius:17px;background:linear-gradient(150deg,#070a20ec,#140a30ed);box-shadow:0 0 25px #542fff55,inset 0 0 30px #04b7ff14}
+#custom .field{border-color:#8561c4!important;background:#070b1df2!important;box-shadow:inset 0 0 13px #211149;color:#fff;min-height:48px}
+#custom .field:focus{outline:2px solid #36dfff;outline-offset:1px}
+#custom .formgrid .btn{border:1px solid #f2aaff;box-shadow:0 0 22px #b44aff88,0 0 12px #20e4ff44;background:linear-gradient(110deg,#8c42ff,#d13dd4,#285cde)}
+#vip .heading{padding:22px 26px;border:1px solid #985bff;border-radius:18px;background:linear-gradient(100deg,#090c26d9,#26103bdc),url('wallpapers/vip.webp') center/cover;box-shadow:inset 0 0 30px #a43aff36,0 0 25px #a43aff35}
+#vip .heading h2{font-family:'Old English Text MT','UnifrakturCook',Georgia,serif;font-size:clamp(32px,3.7vw,51px)!important;text-shadow:0 0 17px #b75cff}
+#vip .heading .muted{color:#eee0ff}
+#vip .plans{gap:clamp(12px,1.7vw,23px)}
+#vip .plan{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:420px;padding:clamp(20px,2.2vw,32px)!important;border:2px solid var(--vip-accent)!important;background:linear-gradient(180deg,#090d24a6 0%,#080b1cf4 47%,#080b1c 100%),url('wallpapers/dragon.webp') center top/cover!important;box-shadow:0 0 24px var(--vip-glow),inset 0 0 35px var(--vip-glow)!important;transition:transform .25s,box-shadow .25s}
+#vip .plan:nth-child(1){--vip-accent:#f28a42;--vip-glow:#f37a3059}
+#vip .plan:nth-child(2){--vip-accent:#54d8ff;--vip-glow:#38c8ff6a;background-image:linear-gradient(180deg,#071e3b91 0%,#07142af4 48%,#070c1d 100%),url('draken-banner.jpg')!important}
+#vip .plan:nth-child(3){--vip-accent:#ffd166;--vip-glow:#f8b82d63;background-image:linear-gradient(180deg,#38200a80 0%,#16101af4 48%,#0c0a1b 100%),url('wallpapers/vip.webp')!important}
+#vip .plan:hover{transform:translateY(-5px);box-shadow:0 0 36px var(--vip-glow),inset 0 0 45px var(--vip-glow)!important}
+#vip .plan:before{content:'♛';position:absolute;top:10px;right:18px;font-size:52px;color:var(--vip-accent);text-shadow:0 0 16px var(--vip-accent);opacity:.9}
+#vip .plan h3{position:relative;font-family:'Old English Text MT','UnifrakturCook',Georgia,serif;font-size:clamp(27px,2.6vw,37px)!important;color:#fff;text-shadow:0 0 16px var(--vip-accent);margin:10px 0 26px!important}
+#vip .plan .amount{display:block;width:100%;padding:9px 16px;border:1px solid var(--vip-accent);border-radius:32px;text-align:center;font-size:clamp(34px,3vw,44px);background:#070b20e3;box-shadow:0 0 17px var(--vip-glow),inset 0 0 14px var(--vip-glow);margin:0!important}
+#vip .plan .muted{text-align:center;margin:9px 0 16px;color:#fff;font-weight:700}
+#vip .plan ul{flex:1;margin:8px 0 24px;padding-left:23px;color:#fff;font-size:14px;line-height:1.9;min-height:0}
+#vip .plan li::marker{color:var(--vip-accent)}
+#vip .plan .btn{width:100%;border:1px solid var(--vip-accent);background:linear-gradient(120deg,#11152e,#1b1835)!important;color:#fff;box-shadow:0 0 17px var(--vip-glow)!important;margin-top:auto}
+#vip>.notice{padding:13px 16px;border:1px solid #77549d;border-radius:10px;background:#080a1f;color:#ded5f0}
+@media(max-width:900px){#custom .feature{grid-template-columns:1fr}#custom .feature:before{opacity:.15}#vip .plans{grid-template-columns:1fr}#vip .plan{min-height:360px}}
+@media(prefers-reduced-motion:reduce){#vip .plan{transition:none}}

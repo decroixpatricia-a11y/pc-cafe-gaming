@@ -1,0 +1,17 @@
+/* PC Café Gaming — volledige Old School Gothic typografie */
+:root { --pcg-gothic: 'UnifrakturCook','Old English Text MT','Lucida Blackletter',serif; }
+html, body, body * {
+  font-family: var(--pcg-gothic) !important;
+  font-weight: 700;
+  letter-spacing: .015em;
+}
+/* Houd formulierbediening herkenbaar en leesbaar in dezelfde stijl */
+input, select, textarea, button {
+  font-family: var(--pcg-gothic) !important;
+}
+/* Behoud leesbare regelafstand en voorkom afgesneden letters */
+body { line-height: 1.55; }
+h1, h2, h3, h4, .brand, .links, .btn, .plan, .crew-list button {
+  line-height: 1.25;
+  letter-spacing: .02em;
+}
