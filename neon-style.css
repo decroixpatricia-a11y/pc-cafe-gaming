@@ -146,26 +146,20 @@ main.shell{max-width:1480px!important;background:linear-gradient(90deg,#06081ce8
 .highlights>div:nth-child(3){background-image:url("stat-neon-3.webp")!important}
 .highlights>div:nth-child(4){background-image:url("stat-neon-4.webp")!important}
 @media(max-width:650px){.crew-list button{min-height:115px!important;padding:48px 8px 12px!important}.highlights>div{min-height:130px!important}}
-/* Zeven nieuwe PC Café Gaming crewbanners */
+/* Zeven afzonderlijke crewbanners */
 .crew-list button {
-  background-image: url("Naamloos12.jpg") !important;
-  background-size: 200% 400% !important;
+  background-size: contain !important;
+  background-position: center !important;
   background-repeat: no-repeat !important;
   color: transparent !important;
   text-shadow: none !important;
-  min-height: 110px !important;
+  min-height: 125px !important;
 }
 
-/* Eerste zes banners: twee kolommen, drie rijen */
-.crew-list button:nth-child(1) { background-position: 0% 0% !important; }
-.crew-list button:nth-child(2) { background-position: 100% 0% !important; }
-.crew-list button:nth-child(3) { background-position: 0% 33.333% !important; }
-.crew-list button:nth-child(4) { background-position: 100% 33.333% !important; }
-.crew-list button:nth-child(5) { background-position: 0% 66.667% !important; }
-.crew-list button:nth-child(6) { background-position: 100% 66.667% !important; }
-
-/* Ussop: onderste brede banner */
-.crew-list button:nth-child(7) {
-  background-size: 100% 400% !important;
-  background-position: center bottom !important;
-}
+.crew-list button:nth-child(1) { background-image: url("bompa-lawijt.jpg") !important; }
+.crew-list button:nth-child(2) { background-image: url("monkey-d-luffy.jpg") !important; }
+.crew-list button:nth-child(3) { background-image: url("mamakonijn.jpg") !important; }
+.crew-list button:nth-child(4) { background-image: url("racerking.jpg") !important; }
+.crew-list button:nth-child(5) { background-image: url("racerboy.jpg") !important; }
+.crew-list button:nth-child(6) { background-image: url("truckerboy.jpg") !important; }
+.crew-list button:nth-child(7) { background-image: url("ussop.jpg") !important; }
