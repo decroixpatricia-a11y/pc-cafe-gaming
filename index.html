@@ -186,18 +186,50 @@ function addWallpaperRequest(name,size,price){
   document.getElementById('cartCount').textContent=cart.length;
   message('🛒 Toegevoegd aan je aanvraag',name+' ('+size+') — € '+price+'. Maatwerk kost € 2 extra per werkuur. Open je mandje om je aanvraag via Discord door te geven. Er is nog niets betaald.');
 }
+
 function showWallpaperCart(){
-  if(!cart.length){message('🛒 Je mandje','Je hebt nog geen wallpaper gekozen.');return;}
-  const total=cart.reduce((sum,p)=>sum+p.price,0);
-  const lines=cart.map(p=>'- '+p.name+' | '+p.size+' | € '+p.price).join('\n');
-  const request='PC Café Gaming — Wallpaperaanvraag\n'+lines+'\nBasisprijs: € '+total+'\nEventueel maatwerk: € 2 per werkuur (uren vooraf af te spreken).\nDefinitieve prijs en betaling eerst bevestigen via Discord.';
-  document.getElementById('modalTitle').textContent='🛒 Wallpaperaanvraag';
-  document.getElementById('modalBody').textContent=lines+'\nBasisprijs: € '+total+'\nMaatwerk: + € 2 per werkuur. Kopieer je aanvraag en stuur die via Discord. Er wordt nog niets automatisch besteld of betaald.';
-  document.getElementById('modalBody').style.whiteSpace='pre-line';
-  action.hidden=false;action.textContent='📋 Kopieer aanvraag';
-  action.onclick=async()=>{try{await navigator.clipboard.writeText(request);action.textContent='✓ Gekopieerd — open Discord';}catch{action.textContent='Kopiëren mislukt — probeer opnieuw';}};
+  if(!cart.length){
+    message('🛒 Je mandje','Je hebt nog geen wallpaper gekozen.');
+    return;
+  }
+
+  const basisprijs = cart.reduce((sum,p)=>sum+Number(p.price),0);
+  const lijnen = cart.map(p=>p.name+' | '+p.size+' | € '+p.price).join('\n');
+
+  const urenTekst = prompt(
+    'Hoeveel werkuren wil je toevoegen?\n€ 2 per werkuur.\nVul 0 in voor geen extra werkuren.',
+    '0'
+  );
+  if(urenTekst === null) return;
+
+  const uren = Number(urenTekst);
+  if(!Number.isInteger(uren) || uren < 0 || uren > 100){
+    alert('Vul een geldig aantal werkuren in (0 tot 100).');
+    return;
+  }
+
+  const totaal = basisprijs + uren * 2;
+  const bedrag = totaal.toFixed(2);
+  const betaalLink = 'https://www.paypal.me/Dragonmaster11/' + bedrag + 'EUR';
+
+  document.getElementById('modalTitle').textContent = '🛒 Je bestelling';
+  document.getElementById('modalBody').textContent =
+    lijnen + '\n\nBasisprijs: € ' + basisprijs.toFixed(2) +
+    '\nWerkuren: ' + uren + ' × € 2' +
+    '\nTotaal: € ' + bedrag +
+    '\n\nControleer je bestelling voordat je naar PayPal gaat.';
+
+  document.getElementById('modalBody').style.whiteSpace = 'pre-line';
+
+  action.hidden = false;
+  action.textContent = '💳 Betalen via PayPal';
+  action.onclick = () => {
+    window.open(betaalLink,'_blank','noopener,noreferrer');
+  };
+
   modal.showModal();
 }
+
 document.getElementById('search').oninput=drawProducts;drawFilters();drawProducts();document.getElementById('cartButton').onclick=showWallpaperCart;document.getElementById('heroSpots').innerHTML=people.map((p,i)=>`<button class="hotspot" style="left:${i*100/7}%;width:${100/7}%" aria-label="Contact ${p[0]}" title="Contact ${p[0]} via Discord" data-person="${i}"></button>`).join('');document.getElementById('spots').innerHTML=people.map((p,i)=>`<button class="hotspot" style="left:${i*100/7}%;width:${100/7}%" aria-label="Contact ${p[0]}" data-person="${i}"></button>`).join('');const banners = [
   'bompa-lawijt.jpg',
   'monkey-d-luffy.jpg',
