@@ -332,6 +332,40 @@ main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:aut
 @media(max-width:1000px){
   main.shell{width:100%!important;max-width:100%!important}
 }
+</style><style>
+/* DEFINITIEVE AFBAKENING WALLPAPERSHOP: rechterrand altijd binnen scherm */
+@media(min-width:1001px){
+  main.shell{
+    width:calc(100% - 260px)!important;
+    max-width:1240px!important;
+    margin-left:220px!important;
+    margin-right:40px!important;
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+  body>.wallpaper-side-nav{
+    position:fixed!important;left:12px!important;top:50%!important;
+    transform:translateY(-50%)!important;width:175px!important;
+    margin:0!important;float:none!important;z-index:100!important;
+  }
+}
+#shop .wallpaper-shop-layout,
+#shop .wallpaper-shop-layout .neon-shop-art{
+  box-sizing:border-box!important;width:100%!important;max-width:100%!important;
+  min-width:0!important;margin-left:auto!important;margin-right:auto!important;
+  overflow:visible!important;
+}
+#shop .wallpaper-shop-layout .neon-shop-art{
+  border:2px solid #b34cff!important;border-radius:17px!important;
+  box-shadow:0 0 13px #b34cff99,0 0 8px #24dfff77!important;
+}
+#shop .wallpaper-shop-layout .neon-shop-art>img{
+  display:block!important;width:100%!important;max-width:100%!important;
+  height:auto!important;object-fit:contain!important;
+}
+@media(max-width:1000px){
+  main.shell{width:100%!important;max-width:100%!important;margin:0 auto!important}
+}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
