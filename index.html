@@ -508,6 +508,12 @@ main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:aut
 .gaming-motion-bg{filter:brightness(1.48) saturate(1.22) contrast(1.04)!important}
 main.shell{background:linear-gradient(90deg,rgba(9,10,27,.67),rgba(11,9,33,.57) 50%,rgba(9,10,27,.67))!important}
 @media(max-width:900px){main.shell{background:rgba(9,11,32,.69)!important}}
+/* Achtergrondcorrectie: verminder de donkere vlakken boven de bewegende foto. */
+main.shell{background:rgba(8,10,27,.20)!important;box-shadow:0 0 35px #07061535!important;backdrop-filter:none!important}
+#shop,#custom,#vip,#crew{background:rgba(9,12,30,.16)!important;box-shadow:0 0 20px #892fff20!important}
+.section::after,#shop::after,#custom::after,#vip::after,#crew::after{background:transparent!important;box-shadow:none!important}
+.gaming-motion-bg{filter:brightness(1.48) saturate(1.22) contrast(1.0)!important}
+@media(max-width:900px){main.shell{background:rgba(8,10,27,.24)!important}}
 </style><style id="sidebar-position-fix-20261121">
 /* Neonmenu: vaste eigen strook links, nooit boven de pagina-inhoud. */
 @media (min-width:1001px) {
