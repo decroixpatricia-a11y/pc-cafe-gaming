@@ -446,6 +446,19 @@ main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:aut
   #crewList.crew-list button:last-child{grid-column:1!important;width:100%!important;aspect-ratio:8.39 / 1!important}
 }
 </style>
+
+<style id="crew-final-brightness-fix">
+/* Definitieve helderheidscorrectie: maak de bannerafbeeldingen zelf duidelijk lichter. */
+#crewList.crew-list button{
+  filter:brightness(1.48) saturate(1.28) contrast(1.08)!important;
+  opacity:1!important;
+  background-color:#08091b!important;
+}
+#crewList.crew-list button:hover,
+#crewList.crew-list button:focus-visible{
+  filter:brightness(1.55) saturate(1.32) contrast(1.08)!important;
+}
+</style>
 </head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
