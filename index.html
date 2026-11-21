@@ -574,6 +574,11 @@ main.shell{background:rgba(8,10,27,.055)!important;box-shadow:none!important;bac
 #shop,#custom,#vip,#crew{background:rgba(9,12,30,.055)!important;box-shadow:none!important}
 #shop::before,#shop::after,#custom::after,#vip::after,#crew::after,.section::after{background:none!important;box-shadow:none!important}
 @media(max-width:900px){main.shell{background:rgba(8,10,27,.08)!important}}
+</style><style id="remove-old-free-shop-backdrop">
+/* Verbergt de oude, in de achtergrondfoto ingebakken gratis winkel
+   rondom de nieuwe wallpapershop; laat de 14s animatie intact. */
+#shop{isolation:isolate!important;overflow:visible!important}
+#shop::before{content:""!important;display:block!important;position:absolute!important;left:50%!important;right:auto!important;top:0!important;bottom:0!important;width:100vw!important;transform:translateX(-50%)!important;z-index:-1!important;pointer-events:none!important;background:linear-gradient(115deg,#101b38 0%,#20123b 50%,#101b38 100%)!important;box-shadow:none!important;border-top:1px solid #693d9a88;border-bottom:1px solid #693d9a88;border-radius:0!important}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop-collectie">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
