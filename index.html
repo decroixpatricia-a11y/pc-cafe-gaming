@@ -392,46 +392,58 @@ main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:aut
 @media(max-width:520px){#crew .crew-list{grid-template-columns:1fr;gap:12px}#crew .crew-list button:last-child{grid-column:1;width:100%}}
 </style>
 <style id="crew-banners-bright-layout">
-/* Crew banners: helder, volledig zichtbaar en in de gewenste volgorde */
+/* Exacte crew-indeling: twee heldere banners per rij, Ussop onderaan midden. */
 #crewList.crew-list{
   display:grid!important;
   grid-template-columns:repeat(2,minmax(0,1fr))!important;
   gap:14px!important;
-  max-width:900px!important;
+  width:100%!important;
+  max-width:1000px!important;
   margin:22px auto 0!important;
+  align-items:center!important;
 }
 #crewList.crew-list button{
-  position:relative!important;
-  isolation:isolate!important;
-  display:flex!important;
-  align-items:flex-end!important;
-  justify-content:center!important;
+  display:block!important;
+  width:100%!important;
   min-width:0!important;
-  min-height:clamp(118px,17vw,190px)!important;
-  padding:14px 10px!important;
+  min-height:0!important;
+  aspect-ratio:6 / 1!important;
+  padding:0!important;
   overflow:hidden!important;
-  border:2px solid #54ddff!important;
-  border-radius:16px!important;
-  color:#fff!important;
-  font-family:UnifrakturCook,cursive!important;
-  font-size:clamp(17px,2.1vw,27px)!important;
-  font-weight:900!important;
-  text-align:center!important;
-  text-shadow:0 2px 4px #000,0 0 12px #000,0 0 18px #a83cff!important;
-  background-color:transparent!important;
-  background-blend-mode:normal!important;
-  background-size:cover!important;
-  background-position:center 35%!important;
+  border:2px solid #8c55ff!important;
+  border-radius:15px!important;
+  background-color:#08091b!important;
+  background-size:100% 100%!important;
+  background-position:center!important;
   background-repeat:no-repeat!important;
-  box-shadow:0 0 18px #23dfff88!important;
-  filter:brightness(1.22) saturate(1.28) contrast(1.06)!important;
+  color:transparent!important;
+  font-size:0!important;
+  text-shadow:none!important;
+  filter:brightness(1.18) saturate(1.2) contrast(1.04)!important;
+  opacity:1!important;
+  box-shadow:0 0 14px #a94fff88,0 0 10px #20dfff55!important;
+  cursor:pointer!important;
+  transition:filter .2s,transform .2s,box-shadow .2s;
 }
-#crewList.crew-list button:nth-child(4n+2),#crewList.crew-list button:nth-child(4n+3){border-color:#ef63df!important;box-shadow:0 0 18px #ef42d988!important}
-#crewList.crew-list button:last-child{grid-column:1/-1!important;width:calc(50% - 7px)!important;justify-self:center!important}
-#crewList.crew-list button:hover,#crewList.crew-list button:focus-visible{transform:translateY(-2px);outline:3px solid #fff!important;outline-offset:2px;filter:brightness(1.08) saturate(1.12)!important}
-@media(max-width:560px){
- #crewList.crew-list{gap:9px!important}
- #crewList.crew-list button{min-height:112px!important;padding:10px 5px!important;font-size:16px!important;border-radius:11px!important}
+#crewList.crew-list button:nth-child(even){border-color:#26dfff!important;box-shadow:0 0 14px #22dfff88!important}
+#crewList.crew-list button:last-child{
+  grid-column:1 / -1!important;
+  justify-self:center!important;
+  width:78%!important;
+  aspect-ratio:8.39 / 1!important;
+  border-color:#a5ff36!important;
+  box-shadow:0 0 17px #a5ff4b99,0 0 12px #ffe05b55!important;
+}
+#crewList.crew-list button:hover,#crewList.crew-list button:focus-visible{
+  filter:brightness(1.28) saturate(1.25) contrast(1.05)!important;
+  transform:translateY(-2px);
+  outline:3px solid #fff!important;
+  outline-offset:2px;
+}
+@media(max-width:600px){
+  #crewList.crew-list{grid-template-columns:1fr!important;gap:12px!important}
+  #crewList.crew-list button{aspect-ratio:6 / 1!important;border-radius:10px!important}
+  #crewList.crew-list button:last-child{grid-column:1!important;width:100%!important;aspect-ratio:8.39 / 1!important}
 }
 </style>
 </head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
@@ -448,9 +460,7 @@ main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:aut
 </nav>
 
 <main class="shell"><section class="hero-new" id="home"><div aria-label="PC Café Gaming met een stoere neon draak" class="dragon-banner"><img alt="Stoere draak met rode ogen, blauwe en paarse neon en PC Café Gaming in gotische letters" loading="eager" src="draken-banner.jpg"/><span aria-label="Huidige datum en tijd" class="dragon-clock" id="arenaClock"></span></div><div class="gaming-image-panel gaming-wereld-art"><img alt="PC Café Gaming – Jouw Gaming Wereld" loading="eager" src="gaming-wereld-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:25%;width:17%"></a><a aria-label="Community" class="gaming-image-hotspot" href="#crew" style="left:43%;width:17%"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" rel="noopener noreferrer" style="left:61%;width:17%" target="_blank"></a></div><div class="gaming-image-panel gaming-menu-art"><img alt="PC Café Gaming – Gaming navigatie" loading="lazy" src="gaming-menu-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:2.2857%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Game Collectie" class="gaming-image-hotspot" href="#shop" style="left:16.5714%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="VIP lidmaatschap" class="gaming-image-hotspot" href="#vip" style="left:30.8571%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Onze leden" class="gaming-image-hotspot" href="#crew" style="left:45.1429%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="YouTube" class="gaming-image-hotspot" href="#youtube" style="left:59.4286%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" style="left:73.7143%;width:9.7143%;top:80%;height:11%;bottom:auto" target="_blank" rel="noopener noreferrer"></a><a aria-label="Contact" class="gaming-image-hotspot" href="#contact" style="left:88.0000%;width:9.7143%;top:80%;height:11%;bottom:auto"></a></div><div class="photo-frame"><div class="photo-head"><span><span class="live-dot"></span> ONZE OFFICIËLE CREW</span><span>7 GAMERS · KLIK OP EEN STOEL ↓</span></div><div class="photo-stage"><img alt="De zeven gamingstoelen van PC Café Gaming" src="stoelen.png?v=crew-herstel-2"/><div id="heroSpots"></div>
-<div style="width:100%;max-width:1100px;margin:20px auto;text-align:center;">
-<img alt="De zeven banners van PC Café Gaming" src="banners.jpg" style="display:block;width:100%;height:auto;border-radius:14px;">
-</img></div></div><div class="photo-foot"><span>⚡ Bompa Lawijt</span><span>⚡ Mamakonijn</span><span>⚡ Truckerboy</span><span>⚡ Racerking</span><span>⚡ Monkey D. Luffy</span><span>⚡ Racerboy</span><span>⚡ Ussop the One Piece</span></div></div><div class="highlights"><div><strong>07
+</div></div><div class="highlights"><div><strong>07
 </strong><span>Discord-contacten</span></div><div><strong>∞</strong><span>Wallpaper thema's</span></div><div><strong>03</strong><span>VIP-lidmaatschappen</span></div><div><strong>24/7</strong><span>Gaming vibes</span></div></div><div class="collection-showcase"><div class="collection-head"><h2>WALLPAPER <span>COLLECTIES</span></h2><a href="#shop">BEKIJK ALLE 8 THEMA'S »</a></div><div class="collection-grid"><a href="#shop"><img alt="Neon Dragon wallpaper" src="wallpapers/dragon.webp"/><b>NEON DRAGON</b></a><a href="#shop"><img alt="Cyber Racing wallpaper" src="wallpapers/racing.webp"/><b>CYBER RACING</b></a><a href="#shop"><img alt="PC Café Nights wallpaper" src="wallpapers/gaming.webp"/><b>PC CAFÉ NIGHTS</b></a><a href="#shop"><img alt="Anime wallpaper" src="wallpapers/anime.webp"/><b>ANIME</b></a><a href="#shop"><img alt="Truck Legends wallpaper" src="wallpapers/trucks.webp"/><b>TRUCK LEGENDS</b></a><a class="gold" href="#vip"><img alt="VIP Collection" src="wallpapers/vip.webp"/><b>VIP COLLECTION</b></a></div><div class="collection-bottom"><span>Ook beschikbaar: Nature Worlds &amp; Fantasy Realms</span><a href="#shop">Ontdek de volledige shop</a></div></div></section>
 <section class="section" id="shop"><div class="gaming-image-panel" style="margin:0 0 22px"><img src="ontdek-jouw-stijl.jpg" alt="PC Café Gaming – Ontdek jouw Stijl, Wallpaper Marketplace" loading="lazy"/><a href="#shop-collectie" aria-label="Bekijk de Wallpaper Collectie" class="gaming-image-hotspot" style="left:32%;width:43%;bottom:4%;height:20%"></a></div><div class="wallpaper-shop-layout" id="shop-collectie"><div aria-label="PC Café Gaming neon wallpaper winkel" class="neon-shop-art"><img alt="PC Café Gaming neon wallpapercollecties, prijzen €6, €14 en €25" loading="eager" src="Neon PC Café Gaming Wallpapercollectie.png"/><a aria-label="Aanvragen: Dragons wallpaper" class="neon-hit" data-neon-category="Dragons" href="#custom" style="left:2.230%;top:51.0%;width:22.677%;height:5.5%"></a><a aria-label="Aanvragen: Cars wallpaper" class="neon-hit" data-neon-category="Cars" href="#custom" style="left:26.022%;top:51.0%;width:22.677%;height:5.5%"></a><a aria-label="Aanvragen: Gaming wallpaper" class="neon-hit" data-neon-category="Gaming" href="#custom" style="left:49.665%;top:51.0%;width:22.677%;height:5.5%"></a><a aria-label="Aanvragen: Anime wallpaper" class="neon-hit" data-neon-category="Anime" href="#custom" style="left:73.755%;top:51.0%;width:22.677%;height:5.5%"></a><a aria-label="Aanvragen: Trucks wallpaper" class="neon-hit" data-neon-category="Trucks" href="#custom" style="left:2.230%;top:88.0%;width:22.677%;height:6.5%"></a><a aria-label="Aanvragen: Nature wallpaper" class="neon-hit" data-neon-category="Nature" href="#custom" style="left:26.022%;top:88.0%;width:22.677%;height:6.5%"></a><a aria-label="Aanvragen: Fantasy wallpaper" class="neon-hit" data-neon-category="Fantasy" href="#custom" style="left:49.665%;top:88.0%;width:22.677%;height:6.5%"></a><a aria-label="Aanvragen: VIP wallpaper" class="neon-hit" href="#vip" style="left:73.755%;top:88.0%;width:22.677%;height:6.5%"></a></div></div><div class="wallpaper-internal-data" hidden aria-hidden="true"><input id="search" type="search"/><div id="filters"></div><div id="products"></div><p id="empty" hidden></p></div></section>
 <section class="section" id="custom"><form aria-label="Wallpaper aanvraagformulier" class="wallpaper-art-form" id="request"><img alt="PC Café Gaming – wallpaper op maat met draken en neon" class="wallpaper-art-image" loading="lazy" src="wallpaper-aanvraag.jpg"/><label class="sr-only" for="wall-name">Jouw naam of Discord-naam</label><input aria-label="Jouw naam of Discord-naam" class="art-field art-name" id="wall-name" name="name" placeholder="Jouw naam / Discord-naam" required=""/><label class="sr-only" for="wall-theme">Kies je thema</label><select aria-label="Kies je thema" class="art-field art-theme" id="wall-theme" name="theme" required=""><option value="">Kies je thema</option><option>Gaming</option><option>Anime</option><option>Dragons</option><option>Cars</option><option>Trucks</option><option>Nature</option><option>Fantasy</option><option>Anders</option></select><label class="sr-only" for="wall-colors">Kleuren</label><input aria-label="Kleuren" class="art-field art-colors" id="wall-colors" name="colors" placeholder="Kleuren (bv. paars en blauw)"/><label class="sr-only" for="wall-size">Formaat</label><select aria-label="Formaat" class="art-field art-size" id="wall-size" name="size"><option>1920×1080 (PC)</option><option>2560×1440 (PC)</option><option>1080×1920 (Telefoon)</option><option>Ander formaat</option></select><label class="sr-only" for="wall-details">Beschrijf jouw droomwallpaper</label><textarea aria-label="Beschrijving" class="art-field art-details" id="wall-details" name="details" placeholder="Beschrijf jouw droomwallpaper..."></textarea><button aria-label="Kopieer mijn aanvraag" class="art-submit" type="submit"><span class="sr-only">Kopieer mijn aanvraag</span></button></form></section>
