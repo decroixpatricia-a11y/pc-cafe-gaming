@@ -280,20 +280,58 @@ font-size:clamp(15px,2vw,23px);font-family:UnifrakturCook,cursive}
 @media(max-width:1100px){#shop .wallpaper-side-nav{position:static!important;float:none!important;width:100%!important;max-width:100%!important;margin:0 0 16px!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}}
 
 .wallpaper-internal-data[hidden]{display:none!important}html{scroll-padding-top:110px}</style><style>
-/* PC Cafe Gaming: definitief uitgelijnde shop en navigatie over de hele site. */
-html,body{max-width:100%;overflow-x:clip}
-main.shell{width:100%;max-width:1240px;margin-left:auto!important;margin-right:auto!important}
-#shop .wallpaper-shop-layout{display:block!important;width:100%!important;max-width:100%!important;margin:0 auto!important;float:none!important;overflow:visible!important}
-#shop .wallpaper-shop-layout .neon-shop-art{width:100%!important;max-width:100%!important;margin:0 auto!important;float:none!important}
-#shop .wallpaper-shop-layout .neon-shop-art>img{width:100%!important;height:auto!important;display:block!important}
-/* Menu staat buiten de shop en blijft dus ook bij de andere secties zichtbaar. */
-body>.wallpaper-side-nav{position:fixed!important;left:clamp(10px,1.4vw,25px)!important;top:50%!important;transform:translateY(-50%);width:clamp(140px,12.5vw,215px)!important;max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;display:flex!important;flex-direction:column!important;gap:8px!important;margin:0!important;padding:5px!important;float:none!important;z-index:100!important;background:transparent!important;border:0!important;box-shadow:none!important;scrollbar-width:thin}
-body>.wallpaper-side-nav a{display:block;text-align:center;flex-shrink:0;padding:9px 5px;border-radius:25px;border:2px solid #ad60ff;background:#120d2a;color:white;text-decoration:none;font-family:UnifrakturCook,cursive;font-size:clamp(13px,1.15vw,19px);line-height:1.25;text-shadow:0 0 6px #c25cff;box-shadow:0 0 8px #bd41ff,inset 0 0 8px #a538ff55}
-body>.wallpaper-side-nav a:nth-child(3n+1){border-color:#ff3e82;box-shadow:0 0 8px #ff3e82}
-body>.wallpaper-side-nav a:nth-child(3n+2){border-color:#36cfff;box-shadow:0 0 8px #36cfff}
-body>.wallpaper-side-nav a:hover,body>.wallpaper-side-nav a:focus-visible{background:#4a1b78;outline:2px solid #fff}
-@media(max-width:1450px) and (min-width:1001px){body>.wallpaper-side-nav{width:125px!important;left:5px!important}body>.wallpaper-side-nav a{font-size:13px;padding:7px 3px}}
-@media(max-width:1000px){body>.wallpaper-side-nav{position:sticky!important;top:0!important;left:auto!important;transform:none!important;width:100%!important;max-height:none!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;background:#0c0b21f2!important;padding:8px!important;gap:7px!important}body>.wallpaper-side-nav a{white-space:nowrap;font-size:13px;padding:7px 12px}main.shell{max-width:100%!important}}
+/* Layoutcorrectie: middeninhoud blijft gecentreerd, menu staat erbuiten. */
+html, body { width:100%; max-width:100%; overflow-x:clip; }
+main.shell { width:100%; max-width:1240px; margin-inline:auto!important; }
+#shop .wallpaper-shop-layout {
+  display:block!important; width:100%!important; max-width:100%!important;
+  margin:0 auto!important; overflow:visible!important;
+}
+#shop .wallpaper-shop-layout .neon-shop-art {
+  width:100%!important; max-width:100%!important; margin:0 auto!important;
+  overflow:hidden!important;
+}
+#shop .wallpaper-shop-layout .neon-shop-art > img {
+  display:block!important; width:100%!important; height:auto!important;
+}
+body > .wallpaper-side-nav {
+  position:fixed!important; top:50%!important; left:10px!important;
+  transform:translateY(-50%)!important; width:125px!important;
+  max-height:calc(100dvh - 30px); overflow-y:auto;
+  display:flex!important; flex-direction:column!important; gap:8px!important;
+  margin:0!important; padding:6px!important; float:none!important;
+  background:transparent!important; border:0!important; z-index:100!important;
+  scrollbar-width:thin;
+}
+body > .wallpaper-side-nav a { font-size:14px; padding:8px 4px; flex-shrink:0; }
+@media (min-width:1001px) {
+  main.shell { max-width:min(1240px, calc(100% - 310px))!important; }
+}
+@media (max-width:1000px) {
+  body > .wallpaper-side-nav {
+    position:sticky!important; top:0!important; left:auto!important;
+    transform:none!important; width:100%!important; max-height:none!important;
+    flex-direction:row!important; overflow-x:auto!important; overflow-y:hidden!important;
+    background:#0c0b21f2!important; padding:8px!important; white-space:nowrap;
+  }
+  body > .wallpaper-side-nav a { font-size:13px; padding:8px 12px; }
+  main.shell { max-width:100%!important; }
+}
+</style><style>
+/* HERSTEL RECHTER NEONRAND — geen afsnijding of horizontale verschuiving */
+html,body{overflow-x:clip!important}
+main.shell{box-sizing:border-box!important;min-width:0!important;margin-left:auto!important;margin-right:auto!important}
+#shop{box-sizing:border-box!important;min-width:0!important;max-width:100%!important;padding-left:0!important;padding-right:0!important}
+#shop .wallpaper-shop-layout{box-sizing:border-box!important;min-width:0!important;max-width:100%!important;overflow:visible!important}
+#shop .wallpaper-shop-layout .neon-shop-art{box-sizing:border-box!important;overflow:visible!important;width:100%!important;max-width:100%!important}
+#shop .wallpaper-shop-layout .neon-shop-art>img{box-sizing:border-box!important;display:block!important;width:100%!important;max-width:100%!important;height:auto!important;object-fit:contain!important;object-position:center!important}
+@media(min-width:1001px){
+  main.shell{width:calc(100% - 340px)!important;max-width:1240px!important}
+  body>.wallpaper-side-nav{left:12px!important;width:145px!important}
+}
+@media(max-width:1000px){
+  main.shell{width:100%!important;max-width:100%!important}
+}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
@@ -305,7 +343,9 @@ body>.wallpaper-side-nav a:hover,body>.wallpaper-side-nav a:focus-visible{backgr
 <a data-neon-category="Dragons" href="#custom">Dragons</a>
 <a data-neon-category="Cars" href="#custom">Cars</a>
 <a href="https://discord.gg/fevQkySWt2" rel="noopener noreferrer" target="_blank">Discord</a>
-</nav><main class="shell"><section class="hero-new" id="home"><div aria-label="PC Café Gaming met een stoere neon draak" class="dragon-banner"><img alt="Stoere draak met rode ogen, blauwe en paarse neon en PC Café Gaming in gotische letters" loading="eager" src="draken-banner.jpg"/><span aria-label="Huidige datum en tijd" class="dragon-clock" id="arenaClock"></span></div><div class="gaming-image-panel gaming-wereld-art"><img alt="PC Café Gaming – Jouw Gaming Wereld" loading="eager" src="gaming-wereld-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:25%;width:17%"></a><a aria-label="Community" class="gaming-image-hotspot" href="#crew" style="left:43%;width:17%"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" rel="noopener noreferrer" style="left:61%;width:17%" target="_blank"></a></div><div class="gaming-image-panel gaming-menu-art"><img alt="PC Café Gaming – Gaming navigatie" loading="lazy" src="gaming-menu-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:2.2857%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Game Collectie" class="gaming-image-hotspot" href="#shop" style="left:16.5714%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="VIP lidmaatschap" class="gaming-image-hotspot" href="#vip" style="left:30.8571%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Onze leden" class="gaming-image-hotspot" href="#crew" style="left:45.1429%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="YouTube" class="gaming-image-hotspot" href="#youtube" style="left:59.4286%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" style="left:73.7143%;width:9.7143%;top:80%;height:11%;bottom:auto" target="_blank" rel="noopener noreferrer"></a><a aria-label="Contact" class="gaming-image-hotspot" href="#contact" style="left:88.0000%;width:9.7143%;top:80%;height:11%;bottom:auto"></a></div><div class="photo-frame"><div class="photo-head"><span><span class="live-dot"></span> ONZE OFFICIËLE CREW</span><span>7 GAMERS · KLIK OP EEN STOEL ↓</span></div><div class="photo-stage"><img alt="De zeven gamingstoelen van PC Café Gaming" src="stoelen.png?v=crew-herstel-2"/><div id="heroSpots"></div>
+</nav>
+
+<main class="shell"><section class="hero-new" id="home"><div aria-label="PC Café Gaming met een stoere neon draak" class="dragon-banner"><img alt="Stoere draak met rode ogen, blauwe en paarse neon en PC Café Gaming in gotische letters" loading="eager" src="draken-banner.jpg"/><span aria-label="Huidige datum en tijd" class="dragon-clock" id="arenaClock"></span></div><div class="gaming-image-panel gaming-wereld-art"><img alt="PC Café Gaming – Jouw Gaming Wereld" loading="eager" src="gaming-wereld-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:25%;width:17%"></a><a aria-label="Community" class="gaming-image-hotspot" href="#crew" style="left:43%;width:17%"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" rel="noopener noreferrer" style="left:61%;width:17%" target="_blank"></a></div><div class="gaming-image-panel gaming-menu-art"><img alt="PC Café Gaming – Gaming navigatie" loading="lazy" src="gaming-menu-nieuw.jpg"/><a aria-label="Wallpaper Shop" class="gaming-image-hotspot" href="#shop" style="left:2.2857%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Game Collectie" class="gaming-image-hotspot" href="#shop" style="left:16.5714%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="VIP lidmaatschap" class="gaming-image-hotspot" href="#vip" style="left:30.8571%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Onze leden" class="gaming-image-hotspot" href="#crew" style="left:45.1429%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="YouTube" class="gaming-image-hotspot" href="#youtube" style="left:59.4286%;width:9.7143%;top:80%;height:11%;bottom:auto"></a><a aria-label="Discord" class="gaming-image-hotspot" href="https://discord.gg/fevQkySWt2" style="left:73.7143%;width:9.7143%;top:80%;height:11%;bottom:auto" target="_blank" rel="noopener noreferrer"></a><a aria-label="Contact" class="gaming-image-hotspot" href="#contact" style="left:88.0000%;width:9.7143%;top:80%;height:11%;bottom:auto"></a></div><div class="photo-frame"><div class="photo-head"><span><span class="live-dot"></span> ONZE OFFICIËLE CREW</span><span>7 GAMERS · KLIK OP EEN STOEL ↓</span></div><div class="photo-stage"><img alt="De zeven gamingstoelen van PC Café Gaming" src="stoelen.png?v=crew-herstel-2"/><div id="heroSpots"></div>
 <div style="width:100%;max-width:1100px;margin:20px auto;text-align:center;">
 <img alt="De zeven banners van PC Café Gaming" src="banners.jpg" style="display:block;width:100%;height:auto;border-radius:14px;">
 </img></div></div><div class="photo-foot"><span>⚡ Bompa Lawijt</span><span>⚡ Mamakonijn</span><span>⚡ Truckerboy</span><span>⚡ Racerking</span><span>⚡ Monkey D. Luffy</span><span>⚡ Racerboy</span><span>⚡ Ussop</span></div></div><div class="highlights"><div><strong>07
