@@ -855,6 +855,22 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
 .photo-frame,.photo-stage,.crew-img,.chair-scene{background:transparent!important;box-shadow:none!important;}
 .photo-frame,.crew-img{border:0!important;}
 .chair-scene .crew-doorlopend{display:block!important;width:100%!important;background-color:transparent!important;}
+</style>
+<style id="fix-highlight-mobile-20261123">
+/* Keep the four information cards legible on narrow phone screens. */
+.highlights{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;max-width:100%;margin:24px 0 30px}
+.highlights>div{min-width:0;overflow:hidden;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:18px 8px;min-height:105px;text-align:center;background:#12172f;border:1px solid #5e5b9c;border-radius:16px}
+.highlights>div>strong{display:block;position:relative;font-family:UnifrakturCook,cursive;font-size:clamp(23px,3vw,36px);line-height:1.1;white-space:nowrap;color:#f4eaff;max-width:100%}
+.highlights>div>span{display:block;position:relative;font-family:inherit;font-size:clamp(11px,1.2vw,15px);line-height:1.35;overflow-wrap:anywhere;color:#e0d8f2;max-width:100%}
+@media(max-width:650px){.highlights{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.highlights>div{min-height:105px;padding:16px 10px}.highlights>div>strong{font-size:30px}.highlights>div>span{font-size:13px}}
+</style>
+<style id="fix-four-cards-20261123">
+/* Verwijder de grote overlappende cijfers; behoud de vier beeldkaarten en gotische titels. */
+.highlights{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;width:100%!important;max-width:100%!important;margin:24px auto 30px!important}
+.highlights>div{min-width:0!important;min-height:135px!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:center!important;overflow:hidden!important;padding:10px 6px 13px!important;background-size:cover!important;background-position:center!important}
+.highlights>div>strong{display:none!important}
+.highlights>div>span{display:block!important;position:relative!important;z-index:2!important;width:100%!important;max-width:100%!important;margin:0!important;font-family:UnifrakturCook,cursive!important;font-size:clamp(12px,3.5vw,19px)!important;line-height:1.2!important;text-align:center!important;white-space:normal!important;overflow-wrap:anywhere!important;color:white!important;text-shadow:0 2px 5px #000,0 0 8px #000!important}
+@media(min-width:750px){.highlights{grid-template-columns:repeat(4,minmax(0,1fr))!important}.highlights>div{min-height:165px!important}.highlights>div>span{font-size:18px!important}}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop-collectie">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
