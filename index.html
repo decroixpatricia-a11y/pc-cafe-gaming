@@ -667,6 +667,22 @@ main.shell{background:rgba(8,10,27,.055)!important;box-shadow:none!important;bac
 #crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:last-child{width:90%!important;height:22%!important}
 #crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:hover{outline:2px solid #ffffffaa!important;outline-offset:-2px!important}
 #crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:focus-visible{outline:3px solid #fff!important;outline-offset:-3px!important}
+</style><style id="crew-seven-click-repair-20261123">
+/* Links in plaats van buttons: oudere button-stijlen kunnen klikzones niet meer verstoren. */
+#crewList.crew-list .crew-seven-image>a.crew-seven-hotspot{
+ position:absolute!important;display:block!important;z-index:100!important;
+ padding:0!important;margin:0!important;border:0!important;box-shadow:none!important;
+ background:transparent!important;opacity:1!important;visibility:visible!important;
+ pointer-events:auto!important;cursor:pointer!important;transform:none!important;
+ min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;
+}
+#crewList.crew-list .crew-seven-image>a.crew-seven-hotspot:hover,
+#crewList.crew-list .crew-seven-image>a.crew-seven-hotspot:focus-visible{
+ outline:2px solid #fff!important;outline-offset:-2px!important;background:#ffffff12!important;
+}
+/* De losse rand rond de crewsectie en het afbeeldingsblok verwijderen. */
+#crew,#crew .crew-list,#crewList .crew-seven-image{border:0!important;box-shadow:none!important;outline:0!important;background:transparent!important}
+#crewList .crew-seven-image>img{border:0!important;box-shadow:none!important;border-radius:0!important}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop-collectie">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
@@ -750,7 +766,7 @@ document.getElementById('search').oninput=drawProducts;drawFilters();drawProduct
   'a_vibrant_neon_anime_style_banner_in_the_same_colo.png'
 ];
 
-document.getElementById('crewList').innerHTML = `<div class="crew-seven-image"><img src="crew-zeven-definitief.png" alt="De zeven neon crewbanners van PC Café Gaming" loading="lazy">${people.map((p,i)=>{const spots=[[1,2,48,24],[51,2,48,24],[1,28,48,23],[51,28,48,23],[1,52,48,23],[51,52,48,23],[5,76,90,22]];const [x,y,w,h]=spots[i];return `<button type="button" class="crew-seven-hotspot" data-person="${i}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%" aria-label="Discord-contact ${p[0]}" title="Discord-contact ${p[0]}"></button>`}).join('')}</div>`;
-document.querySelectorAll('#crewList [data-person]').forEach(b=>b.onclick=()=>showContact(+b.dataset.person));
+document.getElementById('crewList').innerHTML = `<div class="crew-seven-image"><img src="crew-zeven-definitief.png" alt="De zeven neon crewbanners van PC Café Gaming" loading="lazy">${people.map((p,i)=>{const spots=[[1,2,48,24],[51,2,48,24],[1,28,48,23],[51,28,48,23],[1,52,48,23],[51,52,48,23],[5,76,90,22]];const [x,y,w,h]=spots[i];return `<a href="#crew" class="crew-seven-hotspot" data-person="${i}" style="left:${x}%;top:${y}%;width:${w}%;height:${h}%" aria-label="Discord-contact ${p[0]}" title="Discord-contact ${p[0]}"></a>`}).join('')}</div>`;
+document.querySelectorAll('#crewList [data-person]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();showContact(Number(b.dataset.person));}));
 document.getElementById('request').onsubmit=async e=>{e.preventDefault();const f=new FormData(e.currentTarget);const s=`PC Café Gaming — Wallpaper aanvraag\nDiscord: ${f.get('name')}\nThema: ${f.get('theme')}\nKleuren: ${f.get('colors')}\nFormaat: ${f.get('size')}\nBeschrijving: ${f.get('details')}\nMaatwerk: € 2 per werkuur; uren en totaalprijs vooraf af te spreken.`;try{await navigator.clipboard.writeText(s);message('Aanvraag gekopieerd','Plak jouw aanvraag in onze Discord-server: discord.gg/fevQkySWt2. Er is nog niets verstuurd.')}catch{message('Aanvraag','Kopieer je aanvraag handmatig en stuur die via Discord.')}};
 </script><script>(()=>{const el=document.getElementById('arenaClock');if(!el)return;function update(){const d=new Date();el.textContent=new Intl.DateTimeFormat('nl-BE',{weekday:'short',day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(d)}update();setInterval(update,1000)})();</script></body></html>
