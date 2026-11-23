@@ -647,6 +647,26 @@ main.shell{background:rgba(8,10,27,.055)!important;box-shadow:none!important;bac
 #crewList .crew-seven-hotspot{position:absolute!important;display:block!important;min-height:0!important;aspect-ratio:auto!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;opacity:1!important;filter:none!important;cursor:pointer;z-index:2}
 #crewList .crew-seven-hotspot:hover{outline:2px solid #ffffffaa!important;outline-offset:-2px}
 #crewList .crew-seven-hotspot:focus-visible{outline:3px solid #fff!important;outline-offset:-3px}
+
+/* Crew: geen extra kader buiten de zeven bestaande neonranden. */
+#crew{border:0!important;box-shadow:none!important;background:transparent!important}
+#crew::before,#crew::after{border:0!important;box-shadow:none!important;background:none!important}
+#crewList.crew-list{border:0!important;box-shadow:none!important;background:transparent!important;padding:0!important}
+#crewList .crew-seven-image{position:relative!important;line-height:0!important;isolation:isolate}
+#crewList .crew-seven-image>img{display:block!important;width:100%!important;height:auto!important;border:0!important;border-radius:0!important;box-shadow:none!important;outline:none!important}
+/* Override oudere button-regels, met name de 78%-breedte van de laatste knop. */
+#crewList.crew-list .crew-seven-image>button.crew-seven-hotspot{
+ position:absolute!important;display:block!important;z-index:20!important;
+ min-width:0!important;min-height:0!important;max-width:none!important;max-height:none!important;
+ aspect-ratio:auto!important;grid-column:auto!important;justify-self:auto!important;
+ padding:0!important;margin:0!important;border:0!important;border-radius:0!important;
+ background:transparent!important;box-shadow:none!important;filter:none!important;
+ opacity:1!important;visibility:visible!important;transform:none!important;
+ cursor:pointer!important;line-height:0!important;color:transparent!important;
+}
+#crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:last-child{width:90%!important;height:22%!important}
+#crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:hover{outline:2px solid #ffffffaa!important;outline-offset:-2px!important}
+#crewList.crew-list .crew-seven-image>button.crew-seven-hotspot:focus-visible{outline:3px solid #fff!important;outline-offset:-3px!important}
 </style></head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
 <nav aria-label="Neonmenu naast de wallpapershop" class="wallpaper-side-nav">
 <a href="#home">⌂ Home</a><a href="#shop-collectie">▣ Wallpapers</a><a href="#vip">♛ VIP Collection</a>
