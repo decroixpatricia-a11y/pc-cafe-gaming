@@ -812,7 +812,13 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
 
 .original-chair-grid{position:relative;z-index:2;display:grid;grid-template-columns:var(--chair-columns);align-items:end;gap:4px;padding:0 3px}
 .original-chair-grid a{display:block;justify-self:center;width:min(100%,12.5cqw);min-width:0;border-radius:clamp(5px,1.1vw,16px);overflow:hidden}
-.original-chair-grid img{display:block;width:100%;height:18.75cqw;object-fit:contain;object-position:center bottom;filter:brightness(1.1) saturate(1.16)}
+.original-chair-grid img{display:block;width:100%;height:18.75cqw;object-fit:contain;object-position:center bottom;filter:brightness(1.24) saturate(1.27) contrast(1.05)}
+ .original-chair-grid a{box-shadow:0 0 8px var(--chair-glow),0 0 16px color-mix(in srgb,var(--chair-glow) 63%,transparent)}
+.original-chair-grid a:nth-child(1),.original-chair-grid a:nth-child(5),.original-chair-grid a:nth-child(6){--chair-glow:#ff274c}
+.original-chair-grid a:nth-child(2){--chair-glow:#ff31e3}
+.original-chair-grid a:nth-child(3){--chair-glow:#19a8ff}
+.original-chair-grid a:nth-child(4){--chair-glow:#52ff29}
+.original-chair-grid a:nth-child(7){--chair-glow:#ffc52a}
 .original-chair-grid a:hover,.original-chair-grid a:focus-visible{outline:2px solid #fff;outline-offset:-2px}
 .chair-contact{display:none;padding:10px;margin:0;line-height:1.4;background:#21154b;color:#fff}
 .chair-contact:target{display:block}
