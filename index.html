@@ -844,16 +844,12 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
   padding: 0;
 }
 .crew-chair-picture .crew-chair-grid button {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
   border-radius: 0;
 }
-.crew-chair-picture .crew-chair-grid .crew-discord-label {
-  width: 100%;
-  box-sizing: border-box;
-  padding: .15rem 0;
-  font-size: clamp(.55rem, 1vw, .85rem);
+.crew-chair-picture .crew-chair-grid button:hover,
+.crew-chair-picture .crew-chair-grid button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: -2px;
 }
 </style>
 </head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
@@ -933,9 +929,7 @@ document.getElementById('search').oninput=drawProducts;drawFilters();drawProduct
 for (const gridId of ['heroSpots','spots']) {
   const grid=document.getElementById(gridId);
   grid.innerHTML=crewChairOrder.map(personIndex=>
-    `<button type="button" data-person="${personIndex}" aria-label="Contact ${people[personIndex][0]} via Discord">
-      <span class="crew-discord-label">Discord</span>
-    </button>`
+    `<button type="button" data-person="${personIndex}" aria-label="Contact ${people[personIndex][0]} via Discord"></button>`
   ).join('');
   grid.querySelectorAll('button').forEach(button=>{
     button.addEventListener('click',()=>showContact(Number(button.dataset.person)));
