@@ -863,10 +863,15 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
   top:31.88%;
   width:15.28%;
   height:13.82%;
-  overflow:hidden;
   pointer-events:none;
-  clip-path:polygon(0 54%,18% 36%,31% 24%,41% 4%,79% 0,97% 11%,100% 30%,100% 85%,41% 85%,40% 100%,0 100%);
-  background:radial-gradient(ellipse at 65% 56%,#072414 18%,#096519 68%,#23bb34);
+  isolation:isolate;
+}
+#crewList .racerking-skyline::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(ellipse at 66% 54%, #061c0b 18%, #0a4018 68%, #187321);
+  mask-image: radial-gradient(ellipse 66% 63% at 62% 53%, #000 68%, transparent 100%);
 }
 #crewList .racerking-skyline img {
   position:absolute;
@@ -874,10 +879,11 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
   max-height:none;
   border:0;
   box-shadow:none;
-  width:91.85071%;
-  height:105.20607%;
-  left:2.79151%;
-  top:-3.25380%;
+  width:97%;
+  height:99%;
+  left:.3%;
+  top:-1%;
+  filter:drop-shadow(0 1px 2px #05200d) drop-shadow(0 0 3px #65ff4aa0);
 }
 </style>
 </head><body><div aria-hidden="true" class="gaming-motion-bg"></div><div aria-hidden="true" class="cyber-decor"><i class="arena-left"></i><i class="arena-right"></i><i class="arena-ring"></i><i class="arena-sparks"></i><i class="beam a"></i><i class="beam b"></i><i class="orb a"></i><i class="orb b"></i></div><header class="top"><div class="shell nav"><a class="brand" href="#home">✦ PC CAFÉ <b>GAMING</b></a><nav class="links"><a href="#home">⌂ Home</a><a href="#shop">▣ Wallpaper Shop</a><a href="#crew">♧ Leden</a><a href="#vip">♛ VIP Lounge</a><a href="#youtube">▶ YouTube</a><a href="https://discord.gg/fevQkySWt2" rel="noopener" target="_blank">◉ Discord</a><a href="#contact">✉ Contact</a></nav><button class="btn small" id="cartButton">🛒 Mandje <span class="cart-badge" id="cartCount">0</span></button></div></header>
