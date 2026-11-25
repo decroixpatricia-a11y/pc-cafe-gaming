@@ -861,7 +861,8 @@ body{background:#070718 url("gamingkamer-achtergrond.jpg") center / cover fixed 
   position:absolute;
   overflow:hidden;
   pointer-events:none;
-  mask-image:linear-gradient(to right, transparent, #000 2px, #000 calc(100% - 2px), transparent),
+  /* Keep the original neon divider visible on the left. */
+  mask-image:linear-gradient(to right, transparent 4%, #000 9%, #000 calc(100% - 2px), transparent),
              linear-gradient(to bottom, transparent, #000 2px, #000 calc(100% - 2px), transparent);
   mask-composite:intersect;
 }
